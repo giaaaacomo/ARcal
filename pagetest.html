@@ -38,14 +38,7 @@
     renderer="logarithmicDepthBuffer: true;"
     embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
   >
-	  <a-nft
-      type="nft"
-		url="https://arjs-cors-proxy.herokuapp.com/https://github.com/giaaaacomo/ARcal/blob/main/imgmarker/febbraio"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-    >
+	  <a-marker type="pattern" url="https://arjs-cors-proxy.herokuapp.com/https://github.com/giaaaacomo/ARcal/tree/main/mrk/pattern-marker.patt" >
         <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
         <a-box
         scale="1 1 1"
@@ -53,7 +46,7 @@
         color="skyblue"
 		visibility="visible"
 			   ></a-box>
-    </a-nft>
+    </a-marker>
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
   </a-scene>
