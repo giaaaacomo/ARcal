@@ -12,18 +12,13 @@
   
 
   <a-scene
-    vr-mode-ui="enabled: false;"
+    vr-mode-ui="enabled: true;"
     renderer="logarithmicDepthBuffer: true;"
-    embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true;"
+    embedded arjs="trackingMethod: best; sourceType: webcam;"
   >
 	  
     <a-marker preset="custom" type="pattern" url="./2.patt">
-        <a-entity
-            gltf-model="./scene.gltf"
-            scale="1 1 1"
-            position="1 1 1"
-        >
-        </a-entity>
+        <a-box color="green" position="0 2 0" rotation="0 60 60" scale="0.5 0.5 0.5"></a-box>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
