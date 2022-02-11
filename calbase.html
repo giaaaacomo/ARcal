@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <link href='lib/main.css' rel='stylesheet' />
+    <script src='lib/main.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+		  
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+         
+			googleCalendarApiKey: 'AIzaSyBqP-1vFO7wAUAoL1kdyf25psL6WOWsh-M',
+      		events: '59nv6e2sgh8ohets0c0vca0eac@group.calendar.google.com',
+        });
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id='calendar'></div>
+  </body>
+</html>
+
+<!--AIzaSyBqP-1vFO7wAUAoL1kdyf25psL6WOWsh-M-->
+<!--59nv6e2sgh8ohets0c0vca0eac@group.calendar.google.com-->
