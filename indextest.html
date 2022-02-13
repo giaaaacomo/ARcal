@@ -10,11 +10,12 @@
     <body style="margin: 0; overflow: hidden;">
        <a-scene embedded arjs>
     <a-assets>
-        <img id="test_img" src="https://cdn.eso.org/images/screen/eso1907a.jpg">
+        <img id="test_img" src="https://arjs-cors-proxy.herokuapp.com/http://naed.ddns.net/jack/img.png">
     </a-assets>
     <a-marker preset="hiro" url="hiro.patt">
         <a-image 
-            rotation="90 0 0"
+            rotation="0 0 0"
+	scale="1 1 1"
             src="#test_img"></a-image>
     </a-marker>
     <a-entity camera></a-entity>
