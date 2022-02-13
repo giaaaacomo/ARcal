@@ -20,10 +20,10 @@
 				 
         >
             <a-assets>
-                <a-asset-item
+                <img 
                     id="animated-asset"
                     src="https://arjs-cors-proxy.herokuapp.com/https://it.wikipedia.org/wiki/Canale_alfa#/media/File:PNG_transparency_demonstration_1.png"
-                ></a-asset-item>
+                >
             </a-assets>
 
             <a-marker
@@ -36,14 +36,13 @@
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >
-                <a-entity
+                <a-image
                     id="bowser-model"
                     scale="0.4232730536665554 0.4232730536665554 0.4232730536665554"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
+                    img="#animated-asset"
                     class="clickable"
                     gesture-handler
-                ></a-entity>
+                ></a-image>
             </a-marker>
 
             <a-entity camera></a-entity>
