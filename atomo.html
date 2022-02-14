@@ -24,6 +24,8 @@
                     id="animated-asset"
                     src="assets/22.glb"
                 ></a-asset-item>
+				    <img id="22img" src="22.png" alt="ma che fai, lascia stare gli atomi">
+
             </a-assets>
 
             <a-marker
@@ -44,6 +46,18 @@
                     class="clickable"
                     gesture-handler
                 ></a-entity>
+				
+				<a-image 
+				 src="#22img"
+			 	 id="ventidue"
+				 rotation="270 0 0"
+				 visible="false"
+				 scale="5 3.5 1"
+				 position="0 2.2 0"
+				 event-set__1="_event: click; visible: false"
+				 event-set__2="_event: click; _target: #ventiduedue; visible: false"
+				 cursor="rayOrigin: mouse"> </a-image>
+				
             </a-marker>
 
             <a-entity camera></a-entity>
