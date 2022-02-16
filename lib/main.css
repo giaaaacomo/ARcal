@@ -69,11 +69,14 @@
     position: relative;
   }
 
-@font-face {
-  font-family: minion-pro, serif;
-font-style: normal;
-font-weight: 400;
-}
+
+    @font-face {
+    font-family: 'Minion Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Minion Pro Regular'), url('MinionPro-Regular.woff') format('woff');
+    }
+    
 
 .fc-icon {
   /* added for fc */
@@ -204,6 +207,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     background-color: var(--fc-button-bg-color, #2C3E50);
     border-color: #2C3E50;
     border-color: var(--fc-button-border-color, #2C3E50);
+	visibility: hidden;
   }
 .fc .fc-button-primary:hover {
     color: #fff;
@@ -220,6 +224,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
     background-color: var(--fc-button-bg-color, #2C3E50);
     border-color: #2C3E50;
     border-color: var(--fc-button-border-color, #2C3E50); /* overrides :hover */
+	visibility: hidden;
   }
 .fc .fc-button-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);
@@ -288,6 +293,8 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   }
 .fc .fc-toolbar.fc-header-toolbar {
     margin-bottom: 1.5em;
+	position: absolute;
+	bottom: 0px;
   }
 .fc .fc-toolbar.fc-footer-toolbar {
     margin-top: 1.5em;
@@ -295,6 +302,7 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
 .fc .fc-toolbar-title {
     font-size: 1.75em;
     margin: 0;
+	visibility: hidden;
   }
 .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
     margin-left: .75em; /* space between */
@@ -588,6 +596,10 @@ A HORIZONTAL event
 .fc-h-event .fc-event-main-frame {
     display: flex; /* for make fc-event-title-container expand */
   }
+.fc-event-main-frame {
+    white-space: normal;
+}
+
 .fc-h-event .fc-event-time {
     max-width: 100%; /* clip overflow on this element */
     overflow: hidden;
@@ -604,6 +616,7 @@ A HORIZONTAL event
     right: 0; /* for sticky */
     max-width: 100%; /* clip overflow on this element */
     overflow: hidden;
+	font-family: 'Minion Pro Regular';
   }
 .fc-h-event.fc-event-selected:before {
     /* expand hit area */
@@ -711,8 +724,12 @@ A HORIZONTAL event
     z-index: 1; /* container inner z-index's because <tr>s can't do it */
   }
 .fc .fc-daygrid-day.fc-day-today {
+	border: 5px;
+	border-color:beige;
+/*
       background-color: rgba(255, 220, 40, 0.15);
       background-color: var(--fc-today-bg-color, rgba(255, 220, 40, 0.15));
+*/
     }
 .fc .fc-daygrid-day-frame {
     position: relative;
@@ -725,6 +742,10 @@ A HORIZONTAL event
   /* cell top */
 
 }
+.fc-event, .fc-event-dot {
+	font-size: 1.2em !important;
+}
+
 .fc .fc-daygrid-day-top {
     display: flex;
     flex-direction: row-reverse;
@@ -895,16 +916,28 @@ A HORIZONTAL event
   display: flex;
   align-items: center;
   padding: 2px 0;
-	color:peru
-	 
+	color:#6c5f54;
 
 }
+
+#calendar .fc-daygrid-event-dot {
+  display: none;
+}
+
+.fc-event-time { color:#a18575; 
+ font-family: 'Minion Pro Regular';}
+
+
 .fc-daygrid-dot-event .fc-event-title {
     flex-grow: 1;
     flex-shrink: 1;
     min-width: 0; /* important for allowing to shrink all the way */
     overflow: hidden;
     font-weight: bold;
+	
+ font-family: 'Minion Pro Regular';
+    white-space: normal;
+
   }
 .fc-daygrid-dot-event:hover,
   .fc-daygrid-dot-event.fc-event-mirror {
