@@ -28,5 +28,5 @@ var load_event = document.createEvent('Event');
                 document.querySelector('[title="Previous month"]').click();
             }
         }
-        window.dispatchEvent(load_event)
+       setTimeout(()=>{window.dispatchEvent(load_event)}, 300);
     });
