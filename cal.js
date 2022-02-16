@@ -7,6 +7,10 @@ var load_event = document.createEvent('Event');
 
             googleCalendarApiKey: 'AIzaSyBqP-1vFO7wAUAoL1kdyf25psL6WOWsh-M',
             events: '59nv6e2sgh8ohets0c0vca0eac@group.calendar.google.com',
+			eventColor: "peru",
+			eventTextColor: "ivory",
+			aspectRatio:"1.1",			
+			
         });
         calendar.render();
 
