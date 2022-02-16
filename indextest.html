@@ -18,11 +18,13 @@
 		<img id="mese_+2" src="https://arjs-cors-proxy.herokuapp.com/http://naed.ddns.net/jack/month_2.png">
 		<img id="mese_+3" src="https://arjs-cors-proxy.herokuapp.com/http://naed.ddns.net/jack/month_3.png">
     </a-assets>
-    <a-marker preset="hiro" url="hiro.patt">
+    <a-marker type="pattern"
+                preset="custom"
+			  url="2.patt">
         <a-image 
             rotation="-90 0 0"
 	
-            src="#test_img"></a-image>
+            src="#mese_corrente"></a-image>
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
