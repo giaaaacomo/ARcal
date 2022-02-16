@@ -9,7 +9,8 @@ var load_event = document.createEvent('Event');
             events: '59nv6e2sgh8ohets0c0vca0eac@group.calendar.google.com',
 			eventColor: "peru",
 			eventTextColor: "ivory",
-			aspectRatio:"1.1",			
+			aspectRatio:"1.1",
+			firstDay: "1",
 			
         });
         calendar.render();
