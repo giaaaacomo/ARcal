@@ -17,8 +17,10 @@ var load_event = document.createEvent('Event');
         calendar.render();
 
 
-        const urlParams = new URLSearchParams(window.location.search);
-        var month = urlParams.get('month');
+        var strs = window.location.search.split('?')[1].split("&")
+        var month = undefined
+        strs.forEach((el)=>{if (el.split('=')[0] == "month") {month = parseInt(el.split("=")[1])}});
+
         if (month>0) {
             for (let i=0 ; i<month; i++){
                 document.querySelector('[title="Next month"]').click();
