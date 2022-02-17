@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+         <script src="js/aframe.min.js"></script>
+        <script src="js/aframe-ar.js"></script>
+        <script src="js/aframe-extras.loaders.min.js"></script>
+        <script src="js/gesture-detector.js"></script>
+        <script src="js/gesture-handler.js"></script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -18,37 +19,131 @@
 		<img id="mese_+2" src="https://arjs-cors-proxy.herokuapp.com/http://naed.ddns.net/jack/month_2.png">
 		<img id="mese_+3" src="https://arjs-cors-proxy.herokuapp.com/http://naed.ddns.net/jack/month_3.png">
     </a-assets>
+  
+<!--		   GENNAIO-->
    <a-marker
-                id="animated-marker"
+                
                 type="pattern"
                 preset="custom"
-                url="assets/pattern-2.patt"
+                url="assets/pattern-1.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA";
+                
 					  smooth="true";
 					  smoothCount="50";
 			 smoothTolerance="0.1";
 					  smoothThreshold="50";
 					   >
-	   <a-box 
-		src="mock.png"
-                    scale="6.1 5.5 0.1"
-                    class="clickable"
-                    rotation="-90 0 0"
-					position="-2.7 0 -2.4"
-                    gesture-handler></a-box>
-<!--
                 <a-image
-                    src="#mese_corrente"
+                    src="#mese_-1"
                     scale="6.1 5.5 6"
                     class="clickable"
                     rotation="-90 0 0"
 					position="-2.7 0 -2.4"
                     gesture-handler
                 ></a-image>
--->
+
+            </a-marker>
+<!--		   FEBBRAIO-->
+ <a-marker
+                
+                type="pattern"
+                preset="custom"
+                url="assets/pattern-2.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                
+					  smooth="true";
+					  smoothCount="50";
+			 smoothTolerance="0.1";
+					  smoothThreshold="50";
+					   >
+                <a-image
+                    src="#mese_0"
+                    scale="6.1 5.5 6"
+                    class="clickable"
+                    rotation="-90 0 0"
+					position="-2.7 0 -2.4"
+                    gesture-handler
+                ></a-image>
+
+            </a-marker>
+<!--		   MARZO-->
+   <a-marker
+                
+                type="pattern"
+                preset="custom"
+                url="assets/pattern-3.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                
+					  smooth="true";
+					  smoothCount="50";
+			 smoothTolerance="0.1";
+					  smoothThreshold="50";
+					   >
+                <a-image
+                    src="#mese_+1"
+                    scale="6.1 5.5 6"
+                    class="clickable"
+                    rotation="-90 0 0"
+					position="-2.7 0 -2.4"
+                    gesture-handler
+                ></a-image>
+
+            </a-marker>	
+<!--		   APRILE-->
+   <a-marker
+                
+                type="pattern"
+                preset="custom"
+                url="assets/pattern-4.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                
+					  smooth="true";
+					  smoothCount="50";
+			 smoothTolerance="0.1";
+					  smoothThreshold="50";
+					   >
+                <a-image
+                    src="#mese_+2"
+                    scale="6.1 5.5 6"
+                    class="clickable"
+                    rotation="-90 0 0"
+					position="-2.7 0 -2.4"
+                    gesture-handler
+                ></a-image>
+
+            </a-marker>
+<!--		   MAGGIO-->
+   <a-marker
+                
+                type="pattern"
+                preset="custom"
+                url="assets/pattern-5.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                
+					  smooth="true";
+					  smoothCount="50";
+			 smoothTolerance="0.1";
+					  smoothThreshold="50";
+					   >
+                <a-image
+                    src="#mese_+3"
+                    scale="6.1 5.5 6"
+                    class="clickable"
+                    rotation="-90 0 0"
+					position="-2.7 0 -2.4"
+                    gesture-handler
+                ></a-image>
+
             </a-marker>
 		   
     <a-entity camera></a-entity>
