@@ -39,6 +39,29 @@
                     gesture-handler
                 ></a-image>
             </a-marker>
+			
+			 <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/pattern-3.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA";
+					  smooth="true";
+					  smoothCount="10";
+					  smoothThreshold="20";
+					   >
+                <a-image
+                    src="assets/backup/1.png"
+                    scale="6.1 5.5 6"
+                    class="clickable"
+                    rotation="-90 0 0"
+					position="-2.7 0 -2.4"
+                    gesture-handler
+                ></a-image>
+            </a-marker>
 
             <a-entity camera></a-entity>
         </a-scene>
