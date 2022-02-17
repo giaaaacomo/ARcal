@@ -18,22 +18,29 @@
 		<img id="mese_+2" src="https://arjs-cors-proxy.herokuapp.com/http://naed.ddns.net/jack/month_2.png">
 		<img id="mese_+3" src="https://arjs-cors-proxy.herokuapp.com/http://naed.ddns.net/jack/month_3.png">
     </a-assets>
-    <a-marker type="pattern"
+   <a-marker
+                id="animated-marker"
+                type="pattern"
                 preset="custom"
-			  url="assets/2_2.patt">
-        <a-image 
-            rotation="-90 0 0"
-	
-            src="#mese_corrente"></a-image>
-    </a-marker>
-		   <a-marker 
-                preset="hiro"
-			  url="hiro.patt">
-        <a-image 
-            rotation="-90 0 0"
-	
-            src="#mese_corrente"></a-image>
-    </a-marker>
+                url="assets/pattern-2.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA";
+					  smooth="true";
+					  smoothCount="10";
+					  smoothThreshold="20";
+					   >
+                <a-image
+                    src="#mese_corrente"
+                    scale="6.1 5.5 6"
+                    class="clickable"
+                    rotation="-90 0 0"
+					position="-2.7 0 -2.4"
+                    gesture-handler
+                ></a-image>
+            </a-marker>
+		   
     <a-entity camera></a-entity>
 </a-scene>
     </body>
