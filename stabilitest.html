@@ -9,7 +9,7 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
-       <a-scene embedded arjs= "patternRatio: 0.8; trackingMethod: best; sourceWidth:2960; sourceHeight:1440;" >
+       <a-scene embedded arjs= "patternRatio: 0.8; trackingMethod: best; sourceWidth:4032; sourceHeight:3024;" >
     <a-assets>
 <!--
 		<img id="mese_-3" src="https://arjs-cors-proxy.herokuapp.com/http://naed.ddns.net/jack/month_-3.png">
@@ -58,18 +58,18 @@
                 cursor="fuse: false; rayOrigin: mouse;"
                 
 					  smooth="true";
-					  smoothCount="20";
-			 smoothTolerance="0.01";
-					  smoothThreshold="20";
+					  smoothCount="50";
+			 smoothTolerance="0.1";
+					  smoothThreshold="50";
 					   >
-                <a-box
+                <a-image
                     src="#mese_0"
-                    scale="6.1 5.5 0.5"
+                    scale="6.1 5.5 6"
                     class="clickable"
                     rotation="-90 0 0"
 					position="-2.7 0 -2.4"
                     gesture-handler
-                ></a-box>
+                ></a-image>
 
             </a-marker>
 <!--		   MARZO-->
